@@ -1,0 +1,36 @@
+body {
+    font-size: 16;
+    font-family: sans-serif;
+}
+
+.image {
+    width: 500px;
+    border-radius: 10px;
+    /* border-color: crimson;
+    border-width: 10px;
+    border-style: solid; */
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+button {
+    width: 100px;
+    height: 80px;
+    background-color: red;
+}
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+    border-color: #4caf50;
+}
+
+#validation-input.invalid {
+    border-color: #f44336;
+}
