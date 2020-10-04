@@ -8,6 +8,8 @@ function onBlurValidation(event) {
     Number(event.currentTarget.dataset.length)
   ) {
     input.classList = `valid`;
+  } else if (event.currentTarget.value.length === 0) {
+    input.classList = ``;
   } else {
     input.classList = `invalid`;
   }
