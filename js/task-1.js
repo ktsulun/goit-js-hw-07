@@ -1,25 +1,29 @@
-const categoriesItemsArray = document.querySelectorAll(`.item`);
-console.log(`В списке ${categoriesItemsArray.length} категории`);
+// Напиши скрипт, который выполнит следующие операции.
 
-// console.log(categoriesItemsArray);
+// Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'.
 
-// for (let i = 0; i < categoriesItemsArray.length; i += 1) {
-//   const categoriesItemTitle = categoriesItemsArray[i].querySelector(`h2`);
-//   const categoryList = categoriesItemsArray[i].querySelectorAll(`li`);
+// Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль текст заголовка элемента (тега h2) и количество элементов в категории (всех вложенных в него элементов li).
 
-//   console.log(
-//     `Категория: ` +
-//       categoriesItemTitle.textContent +
-//       `\nКоличество элементов: ` +
-//       categoryList.length
-//   );
-// }
+// Например для первой категории получится:
 
-categoriesItemsArray.forEach((element) => {
-  const categoriesItemTitle = element.querySelector(`h2`);
-  const categoryList = element.querySelectorAll(`li`);
+// Категория: Животные
+// Количество элементов: 4
 
-  console.log(
-    `Категория: ${categoriesItemTitle.textContent} \nКоличество элементов: ${categoryList.length}`
-  );
-});
+
+const categoriesInArrey = document.querySelectorAll(".item");
+
+
+
+
+console.log(`В списке ${categoriesInArrey.length} категории.`);
+
+
+
+
+
+categoriesInArrey.forEach(e=>
+console.log(
+  `Категория: ${e.querySelector("h2").textContent}
+  Количество элементов: ${e.querySelectorAll("li").length}`
+))
+

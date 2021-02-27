@@ -16,6 +16,14 @@ const images = [
   },
 ];
 
+
+// Используй массив объектов images для создания тегов img вложенных в li. 
+// Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+
+// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+// Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
+
+
 const gallaryEl = document.querySelector(`#gallery`);
 
 const makeGallaryItemMarkup = (options) => {
@@ -27,7 +35,7 @@ const makeGallaryItemMarkupString = images.map(makeGallaryItemMarkup).join(``);
 
 gallaryEl.insertAdjacentHTML(`afterbegin`, makeGallaryItemMarkupString);
 
-console.log(makeGallaryItemMarkupString);
+// console.log(makeGallaryItemMarkupString);
 
 // const gallaryImagesEl = images.map((option) => {
 //   const imageEl = document.appendChild(`img`);
@@ -36,3 +44,4 @@ console.log(makeGallaryItemMarkupString);
 
 //   return imageEl;
 // });
+

@@ -1,12 +1,22 @@
-const input = document.querySelector("#name-input");
-const log = document.getElementById("name-output");
 
-input.addEventListener("input", updateValue);
+// Напиши скрипт который, при наборе текста 
+// в инпуте input#name-input (событие input), 
+// подставляет его текущее значение в span#name-output. 
+// Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
 
-function updateValue(event) {
-  if (event.target.value === ``) {
-    log.textContent = `незнакомец`;
-  } else {
-    log.textContent = event.target.value;
-  }
+const refs = {
+  input: document.getElementById('name-input'),
+  span: document.getElementById('name-output')
 }
+
+function OnInput(event){
+  event.target.value.replace(/\s/g, '')
+  ? refs.span.textContent = event.target.value
+  : refs.span.textContent = 'незнакомец' 
+}
+
+
+
+refs.input.addEventListener('input',OnInput)
+
+
