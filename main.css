@@ -11,6 +11,10 @@ body {
     border-style: solid; */
 }
 
+h2{
+    font-size: large;
+}
+
 #gallery {
     display: flex;
     justify-content: space-around;
