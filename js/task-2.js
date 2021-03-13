@@ -7,8 +7,8 @@ const ingredients = [
   'Приправы',
 ];
 
-const listEls = [];
 
-ingredients.map(e => listEls.push(`<li>${e}</li>`));
 
-document.getElementById(`ingredients`).innerHTML = [...listEls].join('');
+
+
+document.getElementById(`ingredients`).innerHTML = ingredients.map(e =>`<li>${e}</li>`).join('');
